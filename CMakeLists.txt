@@ -17,6 +17,14 @@ set(PROJECT_SOURCES
         todo_mainwindow.cpp
         todo_mainwindow.h
         todo_mainwindow.ui
+        project_collection.h
+        project_collection.cpp
+        project.h
+        project.cpp
+        spectrum_of_tasks.h
+        spectrum_of_tasks.cpp
+        task.h
+        task.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
