@@ -1,0 +1,8 @@
+/home/alexander/QtCreator_Applications/ToDo_Application/build/CMakeFiles/ToDo_Application.dir
+/home/alexander/QtCreator_Applications/ToDo_Application/build/CMakeFiles/edit_cache.dir
+/home/alexander/QtCreator_Applications/ToDo_Application/build/CMakeFiles/rebuild_cache.dir
+/home/alexander/QtCreator_Applications/ToDo_Application/build/CMakeFiles/list_install_components.dir
+/home/alexander/QtCreator_Applications/ToDo_Application/build/CMakeFiles/install.dir
+/home/alexander/QtCreator_Applications/ToDo_Application/build/CMakeFiles/install/local.dir
+/home/alexander/QtCreator_Applications/ToDo_Application/build/CMakeFiles/install/strip.dir
+/home/alexander/QtCreator_Applications/ToDo_Application/build/CMakeFiles/ToDo_Application_autogen.dir

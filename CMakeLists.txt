@@ -14,8 +14,8 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
-        todo_mainwindow.cpp
         todo_mainwindow.h
+        todo_mainwindow.cpp
         todo_mainwindow.ui
         project_collection.h
         project_collection.cpp
@@ -25,6 +25,8 @@ set(PROJECT_SOURCES
         spectrum_of_tasks.cpp
         task.h
         task.cpp
+        collection_frame.h
+        collection_frame.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
