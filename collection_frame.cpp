@@ -26,6 +26,7 @@ void Collection_Frame::create_Widgets(){
     QHBoxLayout *l = new QHBoxLayout(add_Project_Frame);
 
     add_Project_PushButton = new QPushButton("Add Project", add_Project_Frame);
+    add_Project_PushButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     l->addWidget(add_Project_PushButton);
 
     frame_layout->addWidget(collection);
