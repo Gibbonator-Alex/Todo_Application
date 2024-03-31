@@ -1,7 +1,7 @@
 #include "collection_frame.h"
 
-Collection_Frame::Collection_Frame(QWidget *parent, Ui::Todo_MainWindow *ui)
-    : QFrame(parent), ui(ui)
+Collection_Frame::Collection_Frame(QWidget *parent, Ui::Todo_MainWindow *ui, int collection_id)
+    : QFrame(parent), ui(ui), prjct_coll(collection_id, COLLECTION_STANDARD_TEXT)
 {
     set_Layout();
     create_Widgets();
@@ -11,6 +11,7 @@ Collection_Frame::~Collection_Frame(){
     delete frame_layout;
     delete add_Project_PushButton;
     delete collection;
+    delete add_Project_Frame;
 }
 
 void Collection_Frame::set_Layout(){
@@ -20,12 +21,12 @@ void Collection_Frame::set_Layout(){
 
 void Collection_Frame::create_Widgets(){
     collection = new QLineEdit(this);
-    collection->setText("Collection");
+    collection->setText(COLLECTION_STANDARD_TEXT);
 
-    QFrame *add_Project_Frame = new QFrame(this);
+    add_Project_Frame = new QFrame(this);
     QHBoxLayout *l = new QHBoxLayout(add_Project_Frame);
 
-    add_Project_PushButton = new QPushButton("Add Project", add_Project_Frame);
+    add_Project_PushButton = new QPushButton(ADD_PROJECT_PUSHBUTTON_TEXT, add_Project_Frame);
     add_Project_PushButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     l->addWidget(add_Project_PushButton);
 
@@ -38,5 +39,7 @@ void Collection_Frame::connect_Signal(){
 }
 
 void Collection_Frame::create_Project(){
-    qDebug() << "Project created!";
+    QString buttonTxt = tr("%1: %2").arg(PROJECT_STANDARD_TEXT).arg(frame_layout->count() -1);
+    QPushButton *project = new QPushButton(buttonTxt, this);
+    frame_layout->insertWidget(frame_layout->indexOf(add_Project_Frame), project);
 }

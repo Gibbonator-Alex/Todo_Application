@@ -15,7 +15,7 @@ private:
 
 public:
     Project_Collection(int &id);
-    Project_Collection(int &id, QString &name);
+    Project_Collection(int &id, const QString &name);
     Project_Collection(int &id, QString &name, std::vector<Project> &project_Collection);
     void set_ID(int &id);
     int get_ID();

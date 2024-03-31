@@ -5,7 +5,7 @@ Project_Collection::Project_Collection(int &id){
     this->name = "";
 }
 
-Project_Collection::Project_Collection(int &id, QString &name){
+Project_Collection::Project_Collection(int &id, const QString &name){
     this->id = id;
     this->name = name;
 }

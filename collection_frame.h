@@ -2,6 +2,8 @@
 #define COLLECTION_FRAME_H
 
 #include "ui_todo_mainwindow.h"
+#include "project_collection.h"
+#include "config.h"
 #include <QObject>
 #include <QWidget>
 #include <QFrame>
@@ -13,13 +15,16 @@ class Collection_Frame : public QFrame
 {
     Q_OBJECT
 private:
-     Ui::Todo_MainWindow *ui;
-     QVBoxLayout *frame_layout;
-     QPushButton *add_Project_PushButton;
-     QLineEdit *collection;
+    Project_Collection prjct_coll;
+
+    Ui::Todo_MainWindow *ui;
+    QVBoxLayout *frame_layout;
+    QFrame *add_Project_Frame;
+    QPushButton *add_Project_PushButton;
+    QLineEdit *collection;
 
 public:
-    Collection_Frame(QWidget *parent, Ui::Todo_MainWindow *ui);
+    Collection_Frame(QWidget *parent, Ui::Todo_MainWindow *ui, int collection_id);
     ~Collection_Frame();
 
 private:
