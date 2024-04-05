@@ -54,7 +54,11 @@
          </property>
          <layout class="QVBoxLayout" name="collection_menu_scrollArea_vL">
           <item>
-           <widget class="QDateEdit" name="dateEdit"/>
+           <widget class="QDateEdit" name="dateEdit">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+           </widget>
           </item>
           <item>
            <spacer name="collection_menu_above_vS">
@@ -137,7 +141,7 @@
            <height>521</height>
           </rect>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+         <layout class="QHBoxLayout" name="project_tasks_scrollArea_hL"/>
         </widget>
        </widget>
       </item>

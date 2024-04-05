@@ -17,17 +17,14 @@ set(PROJECT_SOURCES
         todo_mainwindow.h
         todo_mainwindow.cpp
         todo_mainwindow.ui
-        project_collection.h
-        project_collection.cpp
-        project.h
-        project.cpp
-        spectrum_of_tasks.h
-        spectrum_of_tasks.cpp
-        task.h
-        task.cpp
         collection_frame.h
         collection_frame.cpp
-        config.h
+        project_pushbutton.h
+        project_pushbutton.cpp
+        spectrum_of_tasks_frame.h
+        spectrum_of_tasks_frame.cpp
+        task_frame.h
+        task_frame.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

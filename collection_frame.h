@@ -3,6 +3,7 @@
 
 #include "ui_todo_mainwindow.h"
 #include "project_collection.h"
+#include "project_pushbutton.h"
 #include "config.h"
 #include <QObject>
 #include <QWidget>
@@ -10,12 +11,15 @@
 #include <QVBoxLayout>
 #include <QLineEdit>
 #include <QPushButton>
+#include <vector>
 
 class Collection_Frame : public QFrame
 {
     Q_OBJECT
 private:
-    Project_Collection prjct_coll;
+    int id;
+    QString name = COLLECTION_STANDARD_TEXT;
+    std::vector<Project_PushButton*> projects;
 
     Ui::Todo_MainWindow *ui;
     QVBoxLayout *frame_layout;
@@ -23,13 +27,23 @@ private:
     QPushButton *add_Project_PushButton;
     QLineEdit *collection;
 
+
 public:
-    Collection_Frame(QWidget *parent, Ui::Todo_MainWindow *ui, int collection_id);
+    Collection_Frame(QWidget *parent, Ui::Todo_MainWindow *ui, int id, std::vector<Project_PushButton*> projects = {});
     ~Collection_Frame();
+
+    void set_ID(int &id);
+    int get_ID();
+    void set_Name(QString &name);
+    QString get_Name();
+    void set_Project_Collection(std::vector<Project_PushButton*> projects);
+    std::vector<Project_PushButton*> get_Projects();
+    void add_Project(Project_PushButton *project);
+    void delete_Project(Project_PushButton *project);
 
 private:
     void set_Layout();
-    void create_Widgets();
+    void add_Widgets();
     void connect_Signal();
     void create_Project();
 };

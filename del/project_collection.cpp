@@ -13,7 +13,7 @@ Project_Collection::Project_Collection(int &id, const QString &name){
 Project_Collection::Project_Collection(int &id, QString &name, std::vector<Project> &project_Collection){
     this->id = id;
     this->name = name;
-    this->project_Collection = project_Collection;
+    this->projects = project_Collection;
 }
 
 void Project_Collection::set_ID(int &id){
@@ -33,22 +33,22 @@ QString Project_Collection::get_Name(){
 }
 
 void Project_Collection::set_Project_Collection(std::vector<Project> &project_Collection){
-    this->project_Collection = project_Collection;
+    this->projects = project_Collection;
 }
 
 std::vector<Project> Project_Collection::get_Project_Collection(){
-    return this->project_Collection;
+    return this->projects;
 }
 
 void Project_Collection::add_Project(Project &project){
-    this->project_Collection.push_back(project);
+    this->projects.push_back(project);
 }
 
 void Project_Collection::delete_Project(Project &project){
-    for(int i = 0; i <= project_Collection.size(); i++)
+    for(int i = 0; i <= projects.size(); i++)
     {
-        if(project.get_ID() == project_Collection[i].get_ID()){
-            project_Collection.erase(project_Collection.begin() + i);
+        if(project.get_ID() == projects[i].get_ID()){
+            projects.erase(projects.begin() + i);
             break;
         }
     }

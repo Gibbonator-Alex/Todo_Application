@@ -4,7 +4,10 @@
 #include "collection_frame.h"
 #include <QMainWindow>
 #include <QFrame>
+#include <QVBoxLayout>
 #include <QLineEdit>
+#include <vector>
+#include <QWidget>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Todo_MainWindow; }
@@ -23,5 +26,7 @@ private slots:
 
 private:
     Ui::Todo_MainWindow *ui;
+    QVBoxLayout *collection_menu_layout;
+    std::vector<QWidget*> collection_Widgets;
 };
 #endif // TODO_MAINWINDOW_H

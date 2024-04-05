@@ -11,7 +11,7 @@ class Project_Collection
 private:
     int id;
     QString name;
-    std::vector<Project> project_Collection;
+    std::vector<Project> projects;
 
 public:
     Project_Collection(int &id);
