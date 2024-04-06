@@ -9,7 +9,7 @@ Collection_Frame::Collection_Frame(QWidget *parent, Ui::Todo_MainWindow *ui, int
 }
 
 Collection_Frame::~Collection_Frame(){
-    for(Project_Task_Frame *ptr : projects)
+    for(Project_PushButton *ptr : projects)
         delete ptr;
 
     delete frame_layout;
@@ -68,7 +68,7 @@ void Collection_Frame::add_Widgets(){
     add_Project_Frame = new QFrame(this);
     QHBoxLayout *l = new QHBoxLayout(add_Project_Frame);
 
-    add_Project_PushButton = new QPushButton(ADD_PROJECT_PUSHBUTTON_TEXT, add_Project_Frame);
+    add_Project_PushButton = new QPushButton("Add Project", add_Project_Frame);
     add_Project_PushButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     l->addWidget(add_Project_PushButton);
 
@@ -81,7 +81,8 @@ void Collection_Frame::connect_Signal(){
 }
 
 void Collection_Frame::create_Project(){
-    QString buttonTxt = tr("%1: %2").arg(PROJECT_STANDARD_TEXT).arg(frame_layout->count() - 1);
+    // Create the Project Pushbutton with Tasks
+    QString buttonTxt = tr("Project: %1").arg(frame_layout->count() - 1);
     Project_PushButton *prjct_PushButton = new Project_PushButton(this, buttonTxt, ui, 0); // ID
 
     frame_layout->insertWidget(frame_layout->indexOf(add_Project_Frame), prjct_PushButton);

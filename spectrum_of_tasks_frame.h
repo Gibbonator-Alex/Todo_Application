@@ -1,6 +1,7 @@
 #ifndef SPECTRUM_OF_TASKS_FRAME_H
 #define SPECTRUM_OF_TASKS_FRAME_H
 
+#include "task_frame.h"
 #include <QFrame>
 #include <QVBoxLayout>
 #include <QLineEdit>

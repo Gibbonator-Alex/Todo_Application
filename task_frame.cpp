@@ -1,6 +1,7 @@
 #include "task_frame.h"
 
-Task_Frame::Task_Frame(int &id, QString &text_Content){
+Task_Frame::Task_Frame(int id, QString text_Content)
+{
     this->id = id;
     this->text_Content = text_Content;
 }

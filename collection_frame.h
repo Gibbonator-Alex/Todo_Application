@@ -2,9 +2,7 @@
 #define COLLECTION_FRAME_H
 
 #include "ui_todo_mainwindow.h"
-#include "project_collection.h"
 #include "project_pushbutton.h"
-#include "config.h"
 #include <QObject>
 #include <QWidget>
 #include <QFrame>
@@ -18,7 +16,7 @@ class Collection_Frame : public QFrame
     Q_OBJECT
 private:
     int id;
-    QString name = COLLECTION_STANDARD_TEXT;
+    QString name = "Collection";
     std::vector<Project_PushButton*> projects;
 
     Ui::Todo_MainWindow *ui;

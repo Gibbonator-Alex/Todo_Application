@@ -16,38 +16,38 @@ Spectrum_Of_Tasks_Frame::~Spectrum_Of_Tasks_Frame()
     delete task;
 }
 
-void Spectrum_Of_Tasks::set_ID(int &id){
+void Spectrum_Of_Tasks_Frame::set_ID(int &id){
     this->id = id;
 }
 
-int Spectrum_Of_Tasks::get_ID(){
+int Spectrum_Of_Tasks_Frame::get_ID(){
     return this->id;
 }
 
-void Spectrum_Of_Tasks::set_Name(QString &name){
+void Spectrum_Of_Tasks_Frame::set_Name(QString &name){
     this->name = name;
 }
 
-QString Spectrum_Of_Tasks::get_Name(){
+QString Spectrum_Of_Tasks_Frame::get_Name(){
     return this->name;
 }
 
-void Spectrum_Of_Tasks::set_Tasks(std::vector<Task> &tasks){
+void Spectrum_Of_Tasks_Frame::set_Tasks(std::vector<Task_Frame*> tasks){
     this->tasks = tasks;
 }
 
-std::vector<Task> Spectrum_Of_Tasks::get_Tasks(){
+std::vector<Task_Frame*> Spectrum_Of_Tasks_Frame::get_Tasks(){
     return this->tasks;
 }
 
-void Spectrum_Of_Tasks::add_Task(Task &task){
+void Spectrum_Of_Tasks_Frame::add_Task(Task_Frame *task){
     this->tasks.push_back(task);
 }
 
-void Spectrum_Of_Tasks::delete_Task(Task &task){
+void Spectrum_Of_Tasks_Frame::delete_Task(Task_Frame *task){
     for(int i = 0; i <= tasks.size(); i++)
     {
-        if(task.get_ID() == tasks[i].get_ID()){
+        if(task->get_ID() == tasks[i]->get_ID()){
             tasks.erase(tasks.begin() + i);
             break;
         }
